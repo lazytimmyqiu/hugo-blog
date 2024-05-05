@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© tianyuqiu</copyright>
-    <lastBuildDate>Mon, 06 May 2024 01:04:10 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 May 2024 02:12:40 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工业界中基于强化学习的推荐模型调研</title>
+      <link>http://localhost:1313/posts/industry-rl-rec/</link>
+      <pubDate>Mon, 06 May 2024 02:12:40 +0800</pubDate>
+      <guid>http://localhost:1313/posts/industry-rl-rec/</guid>
+      <description></description>
+    </item>
     <item>
       <title>用Hugo和Github Pages搭建自己的blog</title>
       <link>http://localhost:1313/posts/build-this-blog/</link>

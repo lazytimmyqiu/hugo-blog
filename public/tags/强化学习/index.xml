@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>强化学习 on Const Pointer</title>
+    <link>http://localhost:1313/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 强化学习 on Const Pointer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© tianyuqiu</copyright>
+    <lastBuildDate>Mon, 06 May 2024 02:12:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工业界中基于强化学习的推荐模型调研</title>
+      <link>http://localhost:1313/posts/industry-rl-rec/</link>
+      <pubDate>Mon, 06 May 2024 02:12:40 +0800</pubDate>
+      <guid>http://localhost:1313/posts/industry-rl-rec/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
