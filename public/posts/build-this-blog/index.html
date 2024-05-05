@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>用Hugo和Github Pages搭建自己的blog - Const Pointer</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="时隔多年，又一次重新拾起个人blog，记录一下这次折腾的起点。
+这些年陆陆续续尝试过不同的博客方案，按时间排序主要有3种：
+博客写作网站 wordpress &#43; 云托管 hexo/jekyll/hugo &#43; Github Pages托管 第1种方法很快就放弃了，因为总感觉在上面生产的内容不属于自己。基于wordpress的方案相对自主，但对于我这种轻量级写作的人来说，过于笨重了，特别是需要一个云主机进行托管，还要自己折腾域名。
+所以最终还是选择第3种方案，原理上还是比较容易理解的，通过第三方库自动生成基于HTML和CSS的静态网站目录，然后通过Github Pages托管部署。hexo和jekyll在很早之前都尝试过了，这次选择了hugo尝尝鲜。
+Hugo的安装和配置 安装文档
+和大部分软件一样有3种安装模式
+下载二进制包 通过某些包管理器安装 从源码编译 个人感觉直接下载二进制包是最方便的，注意下载后把二进制文件的目录加入PATH中 快速配置
+参考该文档可以快速在本地配置和调试文档，还可以测试不同的theme
+Gihub Pages上的部署 部署文档
+通过该文档配置github上的workflow即可，以后只需在本地进行文档的编辑和可视化调试，然后
+git push -u origin main 即可。" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/posts/build-this-blog/">
+  <meta property="og:site_name" content="Const Pointer">
+  <meta property="og:title" content="用Hugo和Github Pages搭建自己的blog">
+  <meta property="og:description" content="时隔多年，又一次重新拾起个人blog，记录一下这次折腾的起点。
+这些年陆陆续续尝试过不同的博客方案，按时间排序主要有3种：
+博客写作网站 wordpress &#43; 云托管 hexo/jekyll/hugo &#43; Github Pages托管 第1种方法很快就放弃了，因为总感觉在上面生产的内容不属于自己。基于wordpress的方案相对自主，但对于我这种轻量级写作的人来说，过于笨重了，特别是需要一个云主机进行托管，还要自己折腾域名。
+所以最终还是选择第3种方案，原理上还是比较容易理解的，通过第三方库自动生成基于HTML和CSS的静态网站目录，然后通过Github Pages托管部署。hexo和jekyll在很早之前都尝试过了，这次选择了hugo尝尝鲜。
+Hugo的安装和配置 安装文档
+和大部分软件一样有3种安装模式
+下载二进制包 通过某些包管理器安装 从源码编译 个人感觉直接下载二进制包是最方便的，注意下载后把二进制文件的目录加入PATH中 快速配置
+参考该文档可以快速在本地配置和调试文档，还可以测试不同的theme
+Gihub Pages上的部署 部署文档
+通过该文档配置github上的workflow即可，以后只需在本地进行文档的编辑和可视化调试，然后
+git push -u origin main 即可。">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-06T01:04:10+08:00">
+    <meta property="article:modified_time" content="2024-05-06T01:04:10+08:00">
+    <meta property="article:tag" content="写作">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="用Hugo和Github Pages搭建自己的blog">
+<meta name="twitter:description" content="时隔多年，又一次重新拾起个人blog，记录一下这次折腾的起点。
+这些年陆陆续续尝试过不同的博客方案，按时间排序主要有3种：
+博客写作网站 wordpress &#43; 云托管 hexo/jekyll/hugo &#43; Github Pages托管 第1种方法很快就放弃了，因为总感觉在上面生产的内容不属于自己。基于wordpress的方案相对自主，但对于我这种轻量级写作的人来说，过于笨重了，特别是需要一个云主机进行托管，还要自己折腾域名。
+所以最终还是选择第3种方案，原理上还是比较容易理解的，通过第三方库自动生成基于HTML和CSS的静态网站目录，然后通过Github Pages托管部署。hexo和jekyll在很早之前都尝试过了，这次选择了hugo尝尝鲜。
+Hugo的安装和配置 安装文档
+和大部分软件一样有3种安装模式
+下载二进制包 通过某些包管理器安装 从源码编译 个人感觉直接下载二进制包是最方便的，注意下载后把二进制文件的目录加入PATH中 快速配置
+参考该文档可以快速在本地配置和调试文档，还可以测试不同的theme
+Gihub Pages上的部署 部署文档
+通过该文档配置github上的workflow即可，以后只需在本地进行文档的编辑和可视化调试，然后
+git push -u origin main 即可。">
+<script src="http://localhost:1313/js/feather.min.js"></script>
+	
+	
+        <link href="http://localhost:1313/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.d902908ac6e0fab67957de5db5aea1b6455b19ae2ca98eac4c95a4a0fdc02238.css" />
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/">Const Pointer</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">用Hugo和Github Pages搭建自己的blog</h1>
+			<div class="meta">Posted on May 6, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			<p>时隔多年，又一次重新拾起个人blog，记录一下这次折腾的起点。</p>
+<p>这些年陆陆续续尝试过不同的博客方案，按时间排序主要有3种：</p>
+<ol>
+<li>博客写作网站</li>
+<li>wordpress + 云托管</li>
+<li>hexo/jekyll/hugo + Github Pages托管</li>
+</ol>
+<p>第1种方法很快就放弃了，因为总感觉在上面生产的内容不属于自己。基于wordpress的方案相对自主，但对于我这种轻量级写作的人来说，过于笨重了，特别是需要一个云主机进行托管，还要自己折腾域名。</p>
+<p>所以最终还是选择第3种方案，原理上还是比较容易理解的，通过第三方库自动生成基于HTML和CSS的静态网站目录，然后通过Github Pages托管部署。hexo和jekyll在很早之前都尝试过了，这次选择了hugo尝尝鲜。</p>
+<h1 id="hugo的安装和配置">Hugo的安装和配置</h1>
+<p><a href="https://gohugo.io/installation/">安装文档</a></p>
+<p>和大部分软件一样有3种安装模式</p>
+<ul>
+<li>下载二进制包</li>
+<li>通过某些包管理器安装</li>
+<li>从源码编译
+个人感觉直接下载二进制包是最方便的，<strong>注意下载后把二进制文件的目录加入PATH中</strong></li>
+</ul>
+<p><a href="https://gohugo.io/getting-started/quick-start/">快速配置</a></p>
+<p>参考该文档可以快速在本地配置和调试文档，还可以测试不同的theme</p>
+<h1 id="gihub-pages上的部署">Gihub Pages上的部署</h1>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">部署文档</a></p>
+<p>通过该文档配置github上的workflow即可，以后只需在本地进行文档的编辑和可视化调试，然后</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><p>即可。</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/%E5%86%99%E4%BD%9C">写作</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/archie" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © tianyuqiu |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
