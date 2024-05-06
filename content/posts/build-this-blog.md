@@ -29,7 +29,7 @@ tags = ['写作']
 
 参考该文档可以快速在本地配置和调试文档，还可以测试不同的theme
 
-# Gihub Pages上的部署
+# Github Pages上的部署
 [部署文档](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
 通过该文档配置github上的workflow即可，以后只需在本地进行文档的编辑和可视化调试，然后
